@@ -1,0 +1,115 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", sans-serif;
+    background: #111a2e;
+    color: #ffffff;
+    min-height: 2000px; /* Ensure scrolling */
+}
+
+section {
+    max-width: 1200px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 0 20px;
+    place-items: center;
+    min-height: 100vh;
+    display: grid;
+}
+
+p {
+    font-size: .8em;
+}
+
+img {
+    margin: 100px 0;
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.5s;
+}
+
+img:hover {
+    transform: scale(1.15);
+}
+
+/* Extra text sections */
+.extra-text {
+    margin-top: 40px;
+}
+
+.extra-text p {
+    margin-bottom: 25px;
+}
+
+/* Css transitions */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-10%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between; /* Ensure space between logos */
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+.logo {
+    margin: 0 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #111a2e;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.logo img {
+    height: 300px; /* Set a fixed height for the images */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
