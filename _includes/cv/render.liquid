@@ -1,0 +1,94 @@
+{% assign cv = site.data.cv.cv %}
+
+<div class="post cv-page">
+  <header class="post-header cv-intro">
+    <p class="cv-eyebrow">Curriculum vitae</p>
+    <h1 class="post-title">{{ cv.name }}</h1>
+    <p class="post-description">{{ page.description }}</p>
+    <nav class="cv-contact" aria-label="CV contact links">
+      <a href="mailto:{{ cv.email }}">{{ cv.email }}</a>
+      {% for social in cv.social_networks %}
+        <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">{{ social.network }}</a>
+      {% endfor %}
+      <a href="{{ cv.website }}" target="_blank" rel="noopener noreferrer">Portfolio</a>
+    </nav>
+  </header>
+
+  <article class="cv-content">
+    {% for section_pair in cv.sections %}
+      {% assign title = section_pair[0] %}
+      {% assign entries = section_pair[1] %}
+      {% assign expandable = false %}
+      {% if title == 'Competitions & Activities' or title == 'Courses & Certifications' %}
+        {% assign expandable = true %}
+      {% endif %}
+
+      <section class="cv-section" aria-labelledby="{{ title | slugify }}-heading">
+        {% if expandable %}
+          <details class="cv-details">
+            <summary>
+              <span id="{{ title | slugify }}-heading">{{ title }}</span>
+              <span class="cv-details-count">{{ entries.size }} entries</span>
+            </summary>
+            <div class="cv-details-body">
+        {% else %}
+          <h2 id="{{ title | slugify }}-heading">{{ title }}</h2>
+        {% endif %}
+
+        {% if title == 'Technical Skills' %}
+          <dl class="cv-skills">
+            {% for entry in entries %}
+              <div><dt>{{ entry.name }}</dt><dd>{{ entry.values }}</dd></div>
+            {% endfor %}
+          </dl>
+        {% elsif title == 'Languages' %}
+          <ul class="cv-inline-list">
+            {% for entry in entries %}
+              <li><strong>{{ entry.name }}</strong> — {{ entry.values }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <div class="{% if title == 'Education' or title == 'Experience' or title == 'Research & Software Projects' %}cv-entry-list{% else %}cv-compact-grid{% endif %}">
+            {% for entry in entries %}
+              <article class="{% if title == 'Education' or title == 'Experience' or title == 'Research & Software Projects' %}cv-entry{% else %}cv-compact-entry{% endif %}">
+                <div class="cv-entry-heading">
+                  <div>
+                    <h3>
+                      {% if entry.url %}<a href="{{ entry.url }}" target="_blank" rel="noopener noreferrer">{% endif %}
+                      {{ entry.degree | default: entry.name }}
+                      {% if entry.url %}</a>{% endif %}
+                    </h3>
+                    {% if entry.institution %}<p class="cv-organization">{{ entry.institution }}</p>{% endif %}
+                    {% if entry.organization %}<p class="cv-organization">{{ entry.organization }}</p>{% endif %}
+                    {% if entry.links %}
+                      <p class="cv-links">
+                        {% for link in entry.links %}
+                          <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+                        {% endfor %}
+                      </p>
+                    {% endif %}
+                  </div>
+                  <p class="cv-meta">
+                    {{ entry.date }}
+                    {% if entry.location %}<br>{{ entry.location }}{% endif %}
+                    {% if entry.credential %}<br>{{ entry.credential }}{% endif %}
+                  </p>
+                </div>
+                {% if entry.highlights %}
+                  <ul>
+                    {% for item in entry.highlights %}<li>{{ item }}</li>{% endfor %}
+                  </ul>
+                {% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if expandable %}
+            </div>
+          </details>
+        {% endif %}
+      </section>
+    {% endfor %}
+  </article>
+</div>

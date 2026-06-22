@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Research portfolio card</title>
+<desc id="desc">Geometric empty-region diagrams and mathematical formulas.</desc>
+<defs>
+  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0" stop-color="#0f172a"/>
+    <stop offset="0.55" stop-color="#111827"/>
+    <stop offset="1" stop-color="#1e293b"/>
+  </linearGradient>
+  <radialGradient id="a" cx="50%" cy="45%" r="60%">
+    <stop offset="0" stop-color="#38bdf8" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="24"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#g)"/>
+<rect width="1200" height="630" fill="url(#a)"/>
+<g opacity="0.78" stroke="#94a3b8" stroke-width="2" fill="none">
+  <circle cx="375" cy="315" r="172"/>
+  <circle cx="580" cy="315" r="172"/>
+  <path d="M375 315 L580 315" stroke="#e2e8f0" stroke-width="3"/>
+  <circle cx="375" cy="315" r="8" fill="#f8fafc" stroke="none"/>
+  <circle cx="580" cy="315" r="8" fill="#f8fafc" stroke="none"/>
+  <path d="M375 315 C435 145 515 145 580 315 C515 490 435 490 375 315Z" fill="#38bdf8" opacity="0.13" stroke="#38bdf8"/>
+  <path d="M260 450 C380 530 575 530 700 445" stroke="#22c55e" opacity="0.5"/>
+  <path d="M260 180 C380 100 575 100 700 185" stroke="#22c55e" opacity="0.5"/>
+</g>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <text x="750" y="235" fill="#e5e7eb" font-size="34">λ<tspan baseline-shift="sub" font-size="22">d</tspan>(S(p,q)) = ℓ<tspan baseline-shift="sub" font-size="22">p,q</tspan><tspan baseline-shift="super" font-size="22">d</tspan>a<tspan baseline-shift="sub" font-size="22">K</tspan></text>
+  <text x="750" y="295" fill="#cbd5e1" font-size="28">P{Φ(S)=0}=exp{-ρa<tspan baseline-shift="sub" font-size="18">K</tspan>r<tspan baseline-shift="super" font-size="18">d</tspan>}</text>
+  <text x="750" y="355" fill="#cbd5e1" font-size="28">a<tspan baseline-shift="sub" font-size="18">d,SS</tspan>(α)=2κ<tspan baseline-shift="sub" font-size="18">d-1</tspan>∫ y<tspan baseline-shift="sub" font-size="18">α</tspan><tspan baseline-shift="super" font-size="18">d-1</tspan>x′<tspan baseline-shift="sub" font-size="18">α</tspan>du</text>
+</g>
+<text x="70" y="90" fill="#f8fafc" font-size="54" font-family="Georgia, serif">Empty-region proximity graphs</text>
+<text x="70" y="138" fill="#cbd5e1" font-size="26" font-family="Arial, sans-serif">Research portfolio - working papers</text>
+</svg>

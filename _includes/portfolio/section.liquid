@@ -1,0 +1,15 @@
+<section class="portfolio-section" id="{{ include.id }}" aria-labelledby="{{ include.id }}-title">
+  <div class="portfolio-section-heading">
+    <div>
+      <p class="portfolio-kicker">{{ include.eyebrow }}</p>
+      <h2 id="{{ include.id }}-title">{{ include.title }}</h2>
+      {% if include.intro %}<p class="portfolio-section-intro">{{ include.intro }}</p>{% endif %}
+    </div>
+    <a class="portfolio-section-link" href="{{ include.index_url | relative_url }}">View all <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="portfolio-grid">
+    {% for item in include.items %}
+      {% include portfolio/card.liquid item=item %}
+    {% endfor %}
+  </div>
+</section>

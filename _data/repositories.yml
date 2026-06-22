@@ -1,14 +1,10 @@
-github_users:
-  - torvalds
-  - alshedivat
-
-repo_description_lines_max: 2
-
-github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+repositories:
+  - name: ProximityGraphs
+    url: https://github.com/HectorMaravillo/ProximityGraphs
+    role: Contributor / developer
+  - name: Trend-Estimation
+    url: https://github.com/heri-espino/Trend-Estimation
+    role: Author
+  - name: Privileged Template Priors for Mechanistic Interpretability in CNNs
+    url: https://github.com/heri-espino/Privileged-Template-Priors-for-Mechanistic-Interpretability-in-CNNs
+    role: Author

@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<article class="portfolio-detail">
+  <header class="portfolio-detail-header">
+    <div class="portfolio-detail-classification">
+      <span class="portfolio-label">{{ page.label }}</span>
+      <span>{{ page.status }}</span>
+    </div>
+    <h1>{{ page.title }}</h1>
+    <div class="portfolio-detail-meta">
+      <p class="portfolio-authors">{{ page.authors }}</p>
+      <p class="portfolio-meta">{{ page.display_date }}{% if page.location %} · {{ page.location }}{% endif %}</p>
+    </div>
+  </header>
+
+  <div class="portfolio-detail-grid">
+    <aside class="portfolio-detail-aside">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" loading="eager">
+      <div class="portfolio-actions">
+        <a class="portfolio-button portfolio-button-primary" href="{{ page.pdf | relative_url }}">Open PDF <span aria-hidden="true">↗</span></a>
+        {% if page.github %}<a class="portfolio-button" href="{{ page.github }}">GitHub <span aria-hidden="true">↗</span></a>{% endif %}
+      </div>
+      <p class="portfolio-aside-label">Topics</p>
+      <div class="portfolio-tags" aria-label="Topics">
+        {% for tag in page.tags %}<span>{{ tag }}</span>{% endfor %}
+      </div>
+    </aside>
+
+    <div class="portfolio-detail-content">
+      <section class="portfolio-reading-section">
+        <h2>Summary</h2>
+        <p>{{ page.summary }}</p>
+        {% if page.formula %}
+          <div class="portfolio-formula portfolio-math-display">$$ {{ page.formula }} $$</div>
+        {% endif %}
+      </section>
+      {% if page.framing %}
+        <section class="portfolio-reading-section">
+          <h2>Context</h2>
+          <p>{{ page.framing }}</p>
+        </section>
+      {% endif %}
+      <section class="portfolio-reading-section">
+        <h2>Main contributions</h2>
+        <ul>
+          {% for contribution in page.contributions %}<li>{{ contribution }}</li>{% endfor %}
+        </ul>
+      </section>
+      {{ content }}
+    </div>
+  </div>
+</article>

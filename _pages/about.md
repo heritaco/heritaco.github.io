@@ -1,34 +1,45 @@
 ---
-layout: about
-title: about
+layout: default
+title: Home
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+description: Academic portfolio of Heriberto Espino Montelongo.
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<section class="portfolio-hero" aria-labelledby="hero-title">
+  <p class="portfolio-kicker">Academic portfolio · Puebla, Mexico</p>
+  <h1 id="hero-title">Heriberto Espino Montelongo</h1>
+  <p class="portfolio-role">Actuarial Science and Data Science student at Universidad de las Américas Puebla.</p>
+  <p class="portfolio-intro">I work across stochastic geometry, probability, time series, financial risk, and interpretable machine learning. My projects combine mathematical modeling, reproducible computation, and applied data analysis.</p>
+  <div class="portfolio-hero-footer">
+    <nav class="portfolio-hero-links" aria-label="Profile links">
+      <a href="mailto:{{ site.data.socials.email }}">Email</a>
+      <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">LinkedIn</a>
+      <a href="https://github.com/{{ site.data.socials.github_username }}">GitHub</a>
+    </nav>
+    <a class="portfolio-cv-link" href="{{ '/cv/' | relative_url }}">View CV <span aria-hidden="true">→</span></a>
+  </div>
+</section>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+{% assign papers = site.pages | where: "portfolio_type", "paper" | sort: "importance" %}
+{% assign projects = site.projects | sort: "importance" %}
+{% assign notes = site.pages | where: "portfolio_type", "note" | sort: "importance" %}
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+{% include portfolio/section.liquid id="papers" title="Papers" eyebrow="Working manuscripts" intro="Research in stochastic geometry and empty-region proximity graphs." items=papers index_url="/papers/" %}
+{% include portfolio/section.liquid id="projects" title="Projects" eyebrow="Research and software" intro="Applied modeling, reproducible computation, and interpretable machine learning." items=projects index_url="/projects/" %}
+{% include portfolio/section.liquid id="notes" title="Notes" eyebrow="Mathematical notes" intro="Expository work connecting probability, measure theory, and geometric intuition." items=notes index_url="/notes/" %}
+
+<section class="portfolio-section portfolio-contact" id="contact" aria-labelledby="contact-title">
+  <div class="portfolio-section-heading">
+    <div>
+      <p class="portfolio-kicker">Get in touch</p>
+      <h2 id="contact-title">Contact</h2>
+      <p class="portfolio-section-intro">Open to research, software, and academic collaboration.</p>
+    </div>
+  </div>
+  <div class="portfolio-contact-links">
+    <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>
+    <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">LinkedIn</a>
+    <a href="https://github.com/{{ site.data.socials.github_username }}">GitHub</a>
+    <a href="{{ '/cv/' | relative_url }}">CV</a>
+  </div>
+</section>

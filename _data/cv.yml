@@ -1,189 +1,205 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
-  image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
-
+  name: Heriberto Espino Montelongo
+  email: heriberto.espinomo@udlap.mx
+  website: https://heri-espino.github.io
   social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
-    - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+    - { network: LinkedIn, username: heri-espino, url: "https://www.linkedin.com/in/heri-espino/" }
+    - { network: GitHub, username: heri-espino, url: "https://github.com/heri-espino" }
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - degree: Bachelor of Science in Data Science
+        institution: Universidad de las Américas Puebla
+        location: Puebla, Mexico
+        date: Aug 2023 — Jun 2026
         highlights:
-          - Description 1.
-          - Description 2.
-
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+          - "GPA: 9.7/10"
+          - "Scholarship: 40%"
+          - "Relevant coursework: Complex Networks, TDA, Advanced Optimization, DL, AI, ML, CC & Big Data, ABM, Numerical Methods"
+      - degree: Bachelor of Science in Actuarial Science
+        institution: Universidad de las Américas Puebla
+        location: Puebla, Mexico
+        date: Aug 2021 — Jun 2026
         highlights:
-          - Description 1.
-          - Description 2.
+          - "GPA: 9.5/10"
+          - "Scholarship: 40%"
+          - "Relevant coursework: Ruin Theory, Stochastic Processes, Exotic Derivatives, Administration of Financial Risk, Measure Theory"
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - name: Data Analyst at Mathematics Learning Center
+        organization: Universidad de las Américas Puebla
+        location: Puebla, Mexico
+        date: Aug 2025 — Present
         highlights:
-          - Relativity
-          - Description 2.
-
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+          - Constructed a standardized panel dataset; estimated tutoring effects using KDE imputation, within-class Z-scores, robust nonparametric inference, and bootstrap CIs.
+          - Applied unsupervised learning to compare grade-distribution instances through KS based distributional features, generating diagnostics, effect-size summaries, and reports.
+          - Built a one-click pipeline with batch scripts that install missing Miniconda, rerun analyses on new data, and regenerate all Python outputs and LaTeX reports automatically.
+      - name: Quantitative Analyst
+        organization: Actinver
+        location: Mexico City, Mexico
+        date: Jun 2025 — Dec 2025
         highlights:
-          - Description 1.
-          - Description 2.
+          - Built automated portfolios from sentiment on news reports and regression forecasts with trend-engineered features; tested via walk-forward backtests and Bayesian parameter search.
+          - Architected an Airflow ETL DAG with a Docker container to ingest intraday OHLCV/reference data into PostgreSQL for 500 tickers, parameterized to scale to arbitrary tickers.
+          - Web-scraped the latest 100 news items per ticker and normalized metadata by publisher/journal to enable fast filtering, deduplication, and rapid analyst-facing news retrieval.
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+    Research & Software Projects:
+      - name: Developer in Proximity Graphs Python Library
+        date: Aug 2025 — Present
+        location: Puebla, Mexico
+        links: [{ label: PyPI, url: "https://pypi.org/project/proximitygraphs/" }]
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - Converted proximity-graph constructions from mathematical papers into reproducible, object-oriented Python code, structuring algorithms as modular classes across subpackages.
+          - Reorganized the repository architecture for maintainability, enforcing PEP 8/Ruff style conventions and optimizing computational kernels with NumPy vectorization.
+          - Implemented continuous-integration workflows in GitHub Actions to run Ruff, PyTest, and package-build checks across multiple Python versions before publishing releases to PyPI.
+      - name: Unit-Region Factorization for Empty-Region Proximity Graphs
+        date: Jun 2026 — Present
+        location: Puebla, Mexico
+        links:
+          - { label: Portfolio, url: "https://heri-espino.github.io/papers/unit-region-factorization.html" }
+          - { label: PDF, url: "https://heri-espino.github.io/papers/unit-region-factorization.pdf" }
+        highlights:
+          - Proved rigid-motion covariance and scale covariance for Euclidean-definable neighborhood kernels, yielding a dimensionless unit-region factorization.
+          - Derived applications to γ-neighborhood lenses and empty-region graph kernels, establishing invariance conditions for Poisson and NHPP analytic formulas.
+          - Implemented Monte Carlo membership checks for equivariance and scaling tests, validating β-skeleton and γ-graph constructions under invariant center-selection rules.
+      - name: Volume Constants for Stepping–Stone Empty Regions in Rᵈ
+        date: Jun 2026 — Present
+        location: Puebla, Mexico
+        links:
+          - { label: Portfolio, url: "https://heri-espino.github.io/papers/stepping-stone.html" }
+          - { label: PDF, url: "https://heri-espino.github.io/papers/stepping-stone-empty-regions.pdf" }
+        highlights:
+          - Proved a normalized 1D formula for the Lebesgue measure of the Stepping–Stone region using scale reduction, axial slicing, midpoint symmetry.
+          - Derived special cases and built stable quadrature for high-dimensional stepping–stone constants, anchor checks, and limiting geometry across dimensions.
+      - name: Optimal Smoothness Index and Regularization in Guerrero's Penalized Trends
+        date: May 2025 — Present
+        location: Puebla, Mexico
+        links:
+          - { label: Portfolio, url: "https://heri-espino.github.io/projects/sp500-trend-comparison.html" }
+          - { label: PDF, url: "https://heri-espino.github.io/projects/sp500-trend-comparison.pdf" }
+          - { label: GitHub, url: "https://github.com/heritaco/Trend-Estimation" }
+        highlights:
+          - Built a reproducible S&P 500 log-price trend pipeline using Guerrero smoothness, penalized least squares, cached solvers, temporal splits, metrics, and diagnostic plots.
+          - Reused spectral solvers for matrix multiplication across smoothness grids and benchmarked HP, Whittaker, MA, ES, and polynomial baselines using RMSE and SMAPE.
+      - name: Estimation of Latent Risk in the U.S. Market Using Representative Variables
+        date: Jan 2023 — May 2023
+        location: Puebla, Mexico
+        links:
+          - { label: Portfolio, url: "https://heri-espino.github.io/projects/latent-risk-us-market.html" }
+          - { label: PDF, url: "https://heri-espino.github.io/projects/latent-risk-us-market.pdf" }
+          - { label: GitHub, url: "https://github.com/heritaco/Estimation-of-latent-risk-in-the-U.S.-market-using-representative-variables" }
+        highlights:
+          - Built a latent U.S. market-risk index from VIX, WTI, gold, and DXY using a dynamic-factor model to extract common financial-stress variation across global risk proxies.
+          - Smoothed the latent factor with Guerrero-calibrated penalized trends and analyzed inflation lags, crisis deviations, forecast bands, and regime shifts and tail-risk signals.
+      - name: Privileged Template Priors for Mechanistic Interpretability in CNNs
+        date: Dec 2025 — Present
+        location: Puebla, Mexico
+        links:
+          - { label: Portfolio, url: "https://heri-espino.github.io/projects/cnn-primitive-bases.html" }
+          - { label: PDF, url: "https://heri-espino.github.io/projects/cnn-primitive-bases.pdf" }
+          - { label: GitHub, url: "https://github.com/heritaco/Privileged-Template-Priors-for-Mechanistic-Interpretability-in-CNNs" }
+        highlights:
+          - Trained CNNs with random, template-initialized, and frozen-template filters to test inductive bias, sample efficiency, feature reuse, and prior strength in controlled data.
+          - Measured mechanistic identifiability using template-alignment scores, kernel visualizations, ablations, controlled patching, and class-level responses across classes.
+      - name: Systemic Liquidity-Crisis Agent-Based Model
+        date: Oct 2025 — Present
+        location: Puebla, Mexico
+        links:
+          - { label: Portfolio, url: "https://heri-espino.github.io/projects/systemic-liquidity-abm.html" }
+          - { label: PDF, url: "https://heri-espino.github.io/projects/systemic-liquidity-abm.pdf" }
+          - { label: GitHub, url: "https://github.com/heritaco/Modelado-de-Crisis-de-Liquidez-Sistemica-en-Mercados-de-Opciones-mediante-ABM" }
+        highlights:
+          - Built an agent-based derivatives simulator with market participants, stochastic shocks, pricing rules, and margin calls under crisis scenarios.
+          - Tracked liquidation cascades through volatility jumps, spread widening, agent health, stress networks, contagion indices, and network-fragility metrics across agent types.
+      - name: Mathematical Notes on Random Variables as Vectors in L²
+        date: Jun 2026 — Present
+        location: Puebla, Mexico
+        links:
+          - { label: Portfolio, url: "https://heri-espino.github.io/notes/random-variables-as-vectors.html" }
+          - { label: PDF, url: "https://heri-espino.github.io/notes/random-variables-as-vectors.pdf" }
+        highlights:
+          - Wrote formal L² notes framing random variables as Hilbert-space vectors, with expectation, variance, MSE, bias–variance, and regression error as projections.
+          - Derived conditional expectation, tower property, Chapman–Kolmogorov, and total variance as nested projection identities in L² with geometric diagrams and examples.
+      - name: Academic Assistant in Matrix Theory Course
+        date: Jan 2023 — May 2023
+        location: Puebla, Mexico
+        organization: "Universidad de las Américas Puebla; Professor: Dr. Hugo Villanueva Méndez"
+        highlights:
+          - Built reproducible LaTeX Beamer materials with theorem environments, TikZ diagrams, spectral figures, structured handouts, and clean source files for student use.
+          - Standardized notation and visual assets for lectures on linear maps, eigenspaces, diagonalization, decompositions, and matrix factorizations for proof-based teaching.
+
+    Schools:
+      - { name: XXIV School of Probability and Statistics, date: Mar 2026, organization: Centro de Investigación en Matemáticas, location: "Guanajuato, Mexico" }
+      - { name: IV School of Quantum Computing, date: Aug 2025, organization: Universidad Nacional Autónoma de México, location: "Mexico City, Mexico" }
+
+    Leadership:
+      - { name: President of Pretty Good Quantum OE, date: Jan 2026 — Jun 2026, organization: Universidad de las Américas Puebla, location: On Campus }
+      - { name: Vice-President Bitwise Competitive Programming, date: Jan 2025 — Jun 2026, organization: Universidad de las Américas Puebla, location: On Campus }
 
     Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+      - { name: 2nd Place Tech Puebla Capital Hack Summit, date: Oct 2025, organization: Government of Mexico, location: "National, Mexico" }
+      - { name: 3rd Place Datathon on II National Congress of Data Science, date: Oct 2025, organization: Universidad de las Américas Puebla, location: "National, Mexico" }
+      - { name: 4th Place on The 5th UDLAP Mathematics Olympiad, date: Apr 2025, organization: Universidad de las Américas Puebla, location: On Campus }
+      - { name: Top 10 on The 4th UDLAP Mathematics Olympiad, date: Oct 2024, organization: Universidad de las Américas Puebla, location: On Campus }
 
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+    Academic Activities:
+      - { name: Poster Presenter on XLI Colloquium Victor Neumann-Lara, date: Apr 2026, organization: Universidad Nacional Autónoma de México, location: "Morelia, Mexico" }
+      - { name: Poster Presenter on XXIV School of Probability and Statistics, date: Mar 2026, organization: Centro de Investigación en Matemáticas, location: "Guanajuato, Mexico" }
+      - { name: Poster Presenter on II National Congress of Data Science, date: Oct 2025, organization: Universidad de las Américas Puebla, location: "Puebla, Mexico" }
 
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+    Competitions & Activities:
+      - { name: ExoData Challenge, date: May 2026, organization: Gobierno de Puebla, location: National }
+      - { name: Stevens High Frequency Trading Competition, date: May 2026, organization: Stevens Institute of Technology, location: International }
+      - { name: HackODS 2026, date: May 2026, organization: Universidad Nacional Autónoma de México, location: "National, Mexico" }
+      - { name: KN Hack Research Challenge, date: Jun 2026, organization: Kaxa Nuk, location: "National, Mexico" }
+      - { name: BugaMap Challenge, date: Mar 2026, organization: MAPFRE, location: "National, Mexico" }
+      - { name: Futures Trading Challenge, date: "Feb 2026, Mar 2026", organization: CME Group, location: International }
+      - { name: William Lowell Putnam Math Competition, date: "Dec 2024, Dec 2025", organization: Mathematical Association of America, location: North America }
+      - { name: Medication Errors Prevention Challenge, date: Nov 2025, organization: International Society of Pharmacovigilance, location: International }
+      - { name: Actinver Challenge, date: "Oct 2024, Oct 2025", organization: Actinver, location: "National, Mexico" }
+      - { name: Olimpiada Mexicana Universitaria de Matemáticas, date: Jun 2025, organization: Centro de Investigación en Matemáticas, location: "National, Mexico" }
+      - { name: Coppel Challenge, date: Mar 2025, organization: Coppel, location: "National, Mexico" }
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+    Courses & Certifications:
+      - { name: Central Banks and Monetary Policy, organization: University of Illinois Urbana-Champaign, date: Feb 2026, credential: 99GAKZMPU0XU, url: "https://www.coursera.org/account/accomplishments/certificate/99GAKZMPU0XU" }
+      - { name: ML for Trading Specialization, organization: New York Institute of Finance, date: Feb 2026, credential: DXHSQ1BF8268, url: "https://www.coursera.org/account/accomplishments/specialization/certificate/DXHSQ1BF8268" }
+      - { name: Explainable AI (XAI) Specialization, organization: Duke University, date: Jan 2026, credential: YW2PTTQMN0Y1, url: "https://www.coursera.org/account/accomplishments/specialization/certificate/YW2PTTQMN0Y1" }
+      - { name: Philosophy of Science, organization: University of Pennsylvania, date: Jan 2026, credential: S7X46JPJRQ6W, url: "https://www.coursera.org/account/accomplishments/certificate/S7X46JPJRQ6W" }
+      - { name: Fractals and Scaling, organization: Santa Fe Institute, date: Dec 2025, credential: "1150156803", url: "https://www.complexityexplorer.org/courses/187-fractals-and-scaling/certificates/1150156803" }
+      - { name: Narrative Economics, organization: Yale University, date: Dec 2025, credential: 6A388M507ZQW, url: "https://www.coursera.org/account/accomplishments/certificate/6A388M507ZQW" }
+      - { name: Machine Learning on Google Cloud Specialization, organization: Google, date: Dec 2025, credential: Y09J2GJXOZNE, url: "https://www.coursera.org/account/accomplishments/specialization/certificate/Y09J2GJXOZNE" }
+      - { name: RAG for Generative AI Applications Specialization, organization: IBM, date: Dec 2025, credential: 0OGJ0RXG21O9, url: "https://www.coursera.org/account/accomplishments/specialization/certificate/0OGJ0RXG21O9" }
+      - { name: Quantum Computing Specialization, organization: Packt, date: Dec 2025, credential: JWMR0UQE7WO5, url: "https://www.coursera.org/account/accomplishments/specialization/certificate/JWMR0UQE7WO5" }
+      - { name: Spoken Language Processing in Python, organization: Data Camp, date: Nov 2025, credential: Statement of accomplishment, url: "https://www.datacamp.com/completed/statement-of-accomplishment/course/fe0968fbf0b0e02fe69c2a46168bde207561edaf" }
+      - { name: Deep Learning with PyTorch, organization: Data Camp, date: Nov 2025, credential: Statement of accomplishment, url: "https://www.datacamp.com/completed/statement-of-accomplishment/course/30e121f2a320b4a1682ccb67a51ab77173042a09" }
+      - { name: AI in Financial Services Specialization, organization: University of Oxford, date: Aug 2025, credential: 30UBXTRRBN1F, url: "https://www.coursera.org/account/accomplishments/specialization/certificate/30UBXTRRBN1F" }
+      - { name: Generative AI for Software Developers Specialization, organization: Microsoft, date: Aug 2025, credential: HL4R3K5BLPVL, url: "https://www.coursera.org/account/accomplishments/specialization/certificate/HL4R3K5BLPVL" }
+      - { name: "DevOps, Cloud, and Agile Foundations Specialization", organization: IBM, date: Aug 2025, credential: 3HFUXXSZM3D4, url: "https://www.coursera.org/account/accomplishments/specialization/certificate/3HFUXXSZM3D4" }
+      - { name: ML and RL in Finance Specialization, organization: New York University, date: In progress, credential: 47O3HLM8BODX, url: "https://www.coursera.org/account/accomplishments/certificate/47O3HLM8BODX" }
+      - { name: Bayesian Statistics Specialization, organization: UC Santa Cruz, date: In progress, credential: 4FAE9UY8ZIEJ, url: "https://www.coursera.org/account/accomplishments/certificate/4FAE9UY8ZIEJ" }
+      - { name: Financial Engineering and Risk Management Specialization, organization: Columbia University, date: In progress, credential: X45X58MF1V07, url: "https://www.coursera.org/account/accomplishments/certificate/X45X58MF1V07" }
+      - { name: TensorFlow 2 for Deep Learning Specialization, organization: Imperial College London, date: In progress, credential: XCI033EN2OJO, url: "https://www.coursera.org/account/accomplishments/certificate/XCI033EN2OJO" }
+      - { name: Practical Guide to Trading Specialization, organization: Interactive Brokers, date: In progress, credential: 92F6VOZC91R6, url: "https://www.coursera.org/account/accomplishments/certificate/92F6VOZC91R6" }
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
-
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+    Technical Skills:
+      - { name: Programming, values: "Python · C++ · R · SQL · Java · Mosel · Excel/VBA" }
+      - { name: Machine Learning, values: "PyTorch · TensorFlow · Scikit-Learn · Statsmodels · CatBoost · XGBoost · LangChain" }
+      - { name: Data Processing, values: "NumPy · SciPy · Numba · Pandas · Polars · RAPIDS" }
+      - { name: Data Engineering, values: "Airflow (Cloud Composer) · PostgreSQL · MySQL · REST ingestion · Version-controlled ETL · MongoDB · Neo4J" }
+      - { name: Developer Tools, values: "Linux (Arch/Ubuntu) · WSL2 · Bash · Git · Conda · Docker/Compose" }
+      - { name: Visualization, values: "Matplotlib · Plotly · Seaborn · LaTeX · Markdown · HTML · Power BI" }
+      - { name: Specialized, values: "NetworkX · GeoPandas · Mesa · Solara · Qiskit · NetLogo · QGIS" }
 
     Languages:
-      - name: German
-        summary: "Native speaker"
+      - { name: Spanish, values: Native }
+      - { name: English, values: C1 }
+      - { name: German, values: A1 }
+      - { name: French, values: A1 }
 
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
+    Volunteering:
+      - name: Water contamination analysis for Xalmimilulco
+        organization: Data Scientist
+        date: Jan 2026 — Present
+        location: Puebla, Mexico
         highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+          - Dashboards for scraping and geospatial mapping to flag contamination sources.
