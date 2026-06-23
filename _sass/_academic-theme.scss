@@ -2,12 +2,16 @@
   --global-theme-color: #123b63;
   --global-hover-color: #0a2742;
   --global-hover-text-color: #fff;
+  --global-code-bg-color: #f1f5f9;
   --portfolio-focus-color: #0a2742;
+  --portfolio-math-color: #34495e;
 }
 
 html[data-theme="dark"] {
   --global-theme-color: #8fb6d8;
   --global-hover-color: #b8d2e8;
   --global-hover-text-color: #0a2742;
+  --global-code-bg-color: #202b35;
   --portfolio-focus-color: #8fb6d8;
+  --portfolio-math-color: #d2dce5;
 }

@@ -14,7 +14,7 @@ footer_text: >
   Academic portfolio of Heriberto Espino Montelongo.
 keywords: stochastic geometry, probability, time series, financial risk, interpretable machine learning, academic portfolio
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: favicon.ico # the favicon image in /assets/img/
 
 url: https://heri-espino.github.io # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog/. Leave blank for root

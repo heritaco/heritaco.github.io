@@ -16,23 +16,66 @@ description: Academic portfolio of Heriberto Espino Montelongo.
       <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">LinkedIn</a>
       <a href="https://github.com/{{ site.data.socials.github_username }}">GitHub</a>
     </nav>
-    <a class="portfolio-cv-link" href="{{ '/cv/' | relative_url }}">View CV <span aria-hidden="true">→</span></a>
+    {% comment %}Restore the View CV link here when `_pages/cv.md` is republished.{% endcomment %}
   </div>
 </section>
 
 {% assign papers = site.pages | where: "portfolio_type", "paper" | sort: "importance" %}
 {% assign projects = site.projects | sort: "importance" %}
 {% assign notes = site.pages | where: "portfolio_type", "note" | sort: "importance" %}
+{% assign featured_papers = papers | slice: 0, 2 %}
+{% assign featured_projects = projects | slice: 0, 2 %}
+{% assign featured_notes = notes | slice: 0, 2 %}
 
-{% include portfolio/section.liquid id="papers" title="Papers" eyebrow="Working manuscripts" intro="Research in stochastic geometry and empty-region proximity graphs." items=papers index_url="/papers/" %}
-{% include portfolio/section.liquid id="projects" title="Projects" eyebrow="Research and software" intro="Applied modeling, reproducible computation, and interpretable machine learning." items=projects index_url="/projects/" %}
-{% include portfolio/section.liquid id="notes" title="Notes" eyebrow="Mathematical notes" intro="Expository work connecting probability, measure theory, and geometric intuition." items=notes index_url="/notes/" %}
+{% if papers.size > featured_papers.size %}
+  {% assign papers_eyebrow = "Selected papers" %}
+  {% assign papers_support = "Selected working manuscripts and research notes; see the full archive for all paper records and materials." %}
+  {% assign papers_top_link = "Browse all papers" %}
+  {% assign papers_bottom_link = "Browse the complete papers archive" %}
+{% else %}
+  {% assign papers_eyebrow = "Papers" %}
+  {% assign papers_support = "All current paper records and materials are shown here and maintained in the papers archive." %}
+  {% assign papers_top_link = "Open papers archive" %}
+  {% assign papers_bottom_link = "Open papers archive" %}
+{% endif %}
 
-<section class="portfolio-section portfolio-contact" id="contact" aria-labelledby="contact-title">
+{% if projects.size > featured_projects.size %}
+  {% assign projects_eyebrow = "Selected projects" %}
+  {% assign projects_support = "Selected research, software, and course projects; see the full archive for every project and its materials." %}
+  {% assign projects_top_link = "Browse all projects" %}
+  {% assign projects_bottom_link = "Browse the complete projects archive" %}
+{% else %}
+  {% assign projects_eyebrow = "Projects" %}
+  {% assign projects_support = "All current research, software, and course projects are shown here and maintained in the projects archive." %}
+  {% assign projects_top_link = "Open projects archive" %}
+  {% assign projects_bottom_link = "Open projects archive" %}
+{% endif %}
+
+{% if notes.size > featured_notes.size %}
+  {% assign notes_eyebrow = "Selected notes" %}
+  {% assign notes_support = "Selected notes are shown here; see the full archive for all available mathematical materials." %}
+  {% assign notes_top_link = "Browse all notes" %}
+  {% assign notes_bottom_link = "Browse the complete notes archive" %}
+{% else %}
+  {% assign notes_eyebrow = "Notes" %}
+  {% assign notes_support = "All currently available mathematical notes are shown here and maintained in the notes archive." %}
+  {% assign notes_top_link = "Open notes archive" %}
+  {% assign notes_bottom_link = "Open notes archive" %}
+{% endif %}
+
+{% include portfolio/section.liquid id="papers" title="Papers" eyebrow=papers_eyebrow intro="Research in stochastic geometry and empty-region proximity graphs." support=papers_support top_link=papers_top_link bottom_link=papers_bottom_link items=featured_papers index_url="/papers/" %}
+{% include portfolio/section.liquid id="projects" title="Projects" eyebrow=projects_eyebrow intro="Applied work in quantitative modeling, financial risk, reproducible data analysis, and interpretable machine learning." support=projects_support top_link=projects_top_link bottom_link=projects_bottom_link items=featured_projects index_url="/projects/" %}
+{% include portfolio/section.liquid id="notes" title="Notes" eyebrow=notes_eyebrow intro="Mathematical notes developed through independent study and research preparation." support=notes_support top_link=notes_top_link bottom_link=notes_bottom_link items=featured_notes index_url="/notes/" %}
+
+<section class="portfolio-section portfolio-home-section portfolio-contact" id="contact" aria-labelledby="contact-title">
   <div class="portfolio-section-heading">
     <div>
       <p class="portfolio-kicker">Get in touch</p>
-      <h2 id="contact-title">Contact</h2>
+      <h2 id="contact-title">
+        <a class="portfolio-section-title-link" href="{{ '/contact/' | relative_url }}">
+          <span>Contact</span>
+        </a>
+      </h2>
       <p class="portfolio-section-intro">Open to research, software, and academic collaboration.</p>
     </div>
   </div>
@@ -40,6 +83,6 @@ description: Academic portfolio of Heriberto Espino Montelongo.
     <a href="mailto:{{ site.data.socials.email }}">{{ site.data.socials.email }}</a>
     <a href="https://www.linkedin.com/in/{{ site.data.socials.linkedin_username }}/">LinkedIn</a>
     <a href="https://github.com/{{ site.data.socials.github_username }}">GitHub</a>
-    <a href="{{ '/cv/' | relative_url }}">CV</a>
+    {% comment %}Restore the CV contact link here when `_pages/cv.md` is republished.{% endcomment %}
   </div>
 </section>
