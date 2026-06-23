@@ -2,7 +2,7 @@
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" aria-label="Primary navigation">
     <div class="container">
       <a class="navbar-brand title font-weight-lighter" href="{{ '/' | relative_url }}">
-        <span class="font-weight-bold">Heriberto</span> Espino Montelongo
+        Heriberto <span class="font-weight-bold">Espino Montelongo</span>
       </a>
       <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="sr-only">Toggle navigation</span>
@@ -12,12 +12,13 @@
       </button>
       <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav">
         <ul class="navbar-nav navbar-menu-list flex-nowrap">
-          {% assign nav_items = "Home|/,Papers|/papers/,Projects|/projects/,Notes|/notes/,Repositories|/repositories/,CV|/cv/,Contact|/#contact" | split: "," %}
+          {% comment %}Restore CV by adding `CV|/cv/` before Contact and re-enabling `_pages/cv.md`.{% endcomment %}
+          {% assign nav_items = "Home|/,Papers|/papers/,Projects|/projects/,Notes|/notes/,Repositories|/repositories/,Contact|/contact/" | split: "," %}
           {% for nav_item in nav_items %}
             {% assign parts = nav_item | split: "|" %}
             {% assign nav_title = parts[0] %}
             {% assign nav_url = parts[1] %}
-            <li class="nav-item {% if nav_url != '/#contact' and page.url == nav_url %}active{% endif %}">
+            <li class="nav-item {% if page.url == nav_url %}active{% endif %}">
               <a class="nav-link" href="{{ nav_url | relative_url }}">{{ nav_title }}</a>
             </li>
           {% endfor %}

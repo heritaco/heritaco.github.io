@@ -19,7 +19,12 @@ layout: default
       <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}" loading="eager">
       <div class="portfolio-actions">
         <a class="portfolio-button portfolio-button-primary" href="{{ page.pdf | relative_url }}">Open PDF <span aria-hidden="true">↗</span></a>
-        {% if page.github %}<a class="portfolio-button" href="{{ page.github }}">GitHub <span aria-hidden="true">↗</span></a>{% endif %}
+        {% if page.github %}
+          <a class="portfolio-button portfolio-button-primary" href="{{ page.github }}">
+            <span class="portfolio-button-label"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        {% endif %}
       </div>
       <p class="portfolio-aside-label">Topics</p>
       <div class="portfolio-tags" aria-label="Topics">
